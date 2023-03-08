@@ -19,6 +19,52 @@
     margin-inline-end: 0px;
     padding-inline-start: 0px;
 }
+/* modal */
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal {
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.close {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #000;
+    border-radius: 100%;
+    top: 8px;
+    right: 8px;
+    font-weight: 400;
+    font-size: 24px;
+    cursor: pointer;  
+}
 
  /* header and footer */
 
@@ -293,6 +339,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
+    margin-bottom: 94px;
 }
 .title-section {
     height: 600px;
@@ -333,9 +380,6 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    width: 270px;
-    height: 16px;
-    
 }
 .index-paragraph {
     font-size: 14px;
@@ -423,23 +467,22 @@
 }
 .skills-svg {
     display: flex;
-    justify-content: space-around;
+    gap: 30px;
+    align-content: center;
 }
 .skill-svg {
     background: #F5F4FA;
     border-radius: 4px;
     padding: 33px 100px;
+    margin-bottom: 30px;
 }
 .strong-points {
     display: flex;
     justify-content: center;
 }
-.index-subtitle {
-    padding-bottom: 10px;
-}
 .index-paragraph {
     padding-top: 10px;
-    padding-right: 30px;
+    width: 270px;
 }
 .skills-images {
     display: flex;
